@@ -7,8 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
-  KeyboardAvoidingView,
-  Platform
+  useWindowDimensions
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {
@@ -83,11 +82,6 @@ export default function HomeScreen() {
   const { current, location } = weather;
 
   return (
-    <KeyboardAvoidingView
-    style={{ flex: 1}}
-    behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-    keyboardVerticalOffset={Platform.OS === 'ios' ? 40 : 0}
-  >
     <View className="flex-1 relative">
       <StatusBar style="light" />
       <AppGradient colors={["#072C5F", "#06599E", "#01D6F6"]}>
@@ -229,6 +223,5 @@ export default function HomeScreen() {
 
       </AppGradient>
     </View>
-    </KeyboardAvoidingView>
   );
 }

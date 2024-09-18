@@ -17,6 +17,7 @@
       "bundleIdentifier": "com.alois7.weather"
     },
     "android": {
+      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
